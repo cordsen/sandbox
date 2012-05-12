@@ -27,6 +27,29 @@ namespace sandbox.linq
             return xml;
         }
 
-        public static 
+        public static void test()
+        {
+            XDocument runway = XDocument.Load(string.Format("{0}.xml", textBox3.Text));
+            //XDocument xdoc = new XDocument(
+
+            new XElement("wayPointsDirection", radioButton1.Text,
+                new XElement("WayPoints",
+                    new XElement("LatitudeDegrees", g[p] + (int)latmin / 60,
+                         new XAttribute("Minutes", (int)latmin % 60),
+                             new XElement("Seconds", (int)(((h[p] - w) % 60 - (int)(latmin % 60)) * 60)),
+                                new XElement("LongitudeDegrees", i[p] + (int)longmin / 60,
+                                    new XAttribute("Minutes", (int)longmin % 60),
+                                      new XAttribute("seconds", (int)((longmin % 60 - (int)(longmin % 60)) * 60)),
+                                         new XElement("IcaoLocator", textBox1.Text,
+                                             new XAttribute("angle", Math.Abs((int)theta1)),
+                                             new XElement("DistanceInNauticalMiles", Math.Sqrt(Math.Pow((A1 / u) * 60, 2) + Math.Pow((A2 / v) * 60, 2))
+                                                 ))))));
+
+
+            XElement ParentNode = runway.Root.Element("wayPointsDirection");
+            XElement node = new XElement("WayPoints");
+            ParentNode.Add(node);
+            runway.Save(string.Format("{0}.xml", textBox3.Text));
+        }
     }
 }
