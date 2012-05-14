@@ -1,6 +1,10 @@
 ﻿(function($) {
 // Image Model - used for a generic image container in the select view
     "use strict";
+
+    var root = this;
+    //var ezpimg;
+
     var Image = Backbone.Model.extend({
         // Standard attributes
         id: "",
@@ -83,5 +87,5 @@
     });
 
     //var photo = new ImageView();
-	var list = new ImageViewList();
-})(jQuery);
+    root.ezpimg = new ImageViewList();
+}).call(this, jQuery);
