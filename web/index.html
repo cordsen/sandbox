@@ -1,12 +1,12 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>photo picker sandbox</title>
-    <link href="/web/resources/css/bootstrap.css" rel="stylesheet"/>
+  <title>photo picker sandbox</title>
+  <link href="/resources/css/bootstrap.css" rel="stylesheet"/>
+  <link href="/resources/css/main.css" rel="stylesheet"/>
 </head>
 <body>
-    <div id="exp_image_list_head"><button id="addPhoto">Add Photo</button></div>
-    <div id="ezp_image_list">
+    <div id="ezp_container">
 <!--        <div id="ezp_image1">
             <img src="http://apps.ezprints.com/Assets/Artwork/Utility/SampleSource/Stock/6863944_00000_thumb.jpg" />
         </div>
@@ -19,15 +19,18 @@
     </div>
 
 <!-- template for image cell -->
-    <div id="ezp_image" class="hidden">
+    <div id="ezp_image" class="hide">
         <img class="image" src="" />
+    </div>
+    <div id="ezp_image_list_template" class="hide">
+      <button id="addPhoto">Add Photo</button>
     </div>
 
 
-<script src="/web/resources/js/lib/jquery-1.7.2.js" ></script>
-<script src="/web/resources/js/lib/underscore.min.js" ></script>
-<script src="/web/resources/js/lib/backbone.min.js" ></script>
-<script src="/web/resources/js/Models.js" ></script>
+<script src="/resources/js/lib/jquery-1.7.2.js" ></script>
+<script src="/resources/js/lib/underscore.min.js" ></script>
+<script src="/resources/js/lib/backbone.min.js" ></script>
+<script src="/resources/js/Models.js" ></script>
 
 </body>
 </html>

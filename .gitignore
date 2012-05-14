@@ -2,6 +2,7 @@
 bin
 obj
 .suo
+.swp
 
 # mstest test results
 TestResults
