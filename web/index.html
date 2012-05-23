@@ -2,29 +2,29 @@
 <html lang="en">
 <head>
   <title>photo picker sandbox</title>
+  <link href="/resources/css/ezp.css" rel="stylesheet"/>
   <link href="/resources/css/bootstrap.css" rel="stylesheet"/>
-  <link href="/resources/css/main.css" rel="stylesheet"/>
 </head>
 <body>
-    <div id="ezp_container">
-<!--        <div id="ezp_image1">
-            <img src="http://apps.ezprints.com/Assets/Artwork/Utility/SampleSource/Stock/6863944_00000_thumb.jpg" />
+    <div id="ezp-container">
+        <div class="image-tray listv">
+            <div class="header">Header</div>
+            <div class="body">
+                <ul class="image-list"></ul>
+            </div>
         </div>
-        <div id="ezp_image2">
-            <img src="http://apps.ezprints.com/Assets/Artwork/Utility/SampleSource/Stock/6863944_00000_thumb.jpg" />
-        </div>
-        <div id="ezp_image3">
-            <img src="http://apps.ezprints.com/Assets/Artwork/Utility/SampleSource/Stock/6863944_00000_thumb.jpg" />
-        </div> -->
     </div>
 
+
 <!-- template for image cell -->
-    <div id="ezp_image" class="hide">
-        <img class="image" src="" draggable="true"/>
-    </div>
-    <div id="ezp_image_list_template" class="hide">
-      <button id="addPhoto">Add Photo</button>
-      <div id="container" class="span4"></div>
+    <div id="ezp-templates">
+        <button id="addPhoto">Add Photo</button>
+        <ul>
+            <li id="image" draggable="true">
+                <a href="#">
+                </a>
+            </li>
+        </ul>
     </div>
 
 

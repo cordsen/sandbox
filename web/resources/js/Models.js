@@ -35,9 +35,7 @@
     });
 
     var ImageList = Backbone.Collection.extend({
-        model: Image,
-
-        
+        model: Image
 
     });
 
@@ -49,7 +47,7 @@
         },
 
         render: function(list) {
-            this.el = $('#ezp_image').clone();
+            this.el = $('#ezp-templates #image').clone();
 			this.el.attr('class', 'image');
             this.el.find("img.image").attr('src', this.model.get('iconUri'));
             return this.el;
@@ -61,11 +59,11 @@
         el : 'div',
 
 		events : {
-			'click button#addPhoto:' : 'appendItem'
+			//'click button#addPhoto1:' : 'appendItem'
 		},
 		
 		initialize: function() {
-            _.bindAll(this, 'render', 'addItem'); // every function that uses 'this' as the current object should be in here
+            _.bindAll(this, 'render', 'addItem', 'appendItem'); // every function that uses 'this' as the current object should be in here
 
             this.collection = new ImageList();
             this.collection.bind('add', this.addItem); // collection event binder
@@ -73,25 +71,25 @@
             this.render();
         },
 		
-		render : function () {
-			this.el = $('#ezp_image_list_template').clone();
-			this.el.attr('id','photo list');
-			this.el.attr('class', 'span4');
-			$('#ezp_container').append(this.el);
-
-		},
-		
 		appendItem : function () {
 			var image = new Image({});
 			var iv = new ImageView({model: image});
 			this.collection.add(image);
-			this.el.find('#container').append(iv.render());
+//			this.el.find('#ezp-container .image-tray .body').append(iv.render());
 		},
 
 		addItem : function (item) {
 			var iv = new ImageView({model: item});
-			this.el.find('#container').append(iv.render());
+			$('#ezp-container .image-tray .image-list').append(iv.render());
+		},
+		render : function () {
+			this.el = $('#ezp-templates #addPhoto').clone();
+			//this.el.attr('id','addPhoto1');
+			//this.el.attr('class', 'span4');
+			$(this.el).click(this.appendItem);
+			$('#ezp-container .image-tray .header').append(this.el);
 		}
+		
     });
 
     //var photo = new ImageView();
@@ -116,7 +114,7 @@ View properties
  - outer container for photos tab: 
     - includes list of sources and collections(albums) in a mega-dropdown 
     - includes a list of photos for the current album (photo is a model)
- - 
+ - toggle between views
 
 View actions
  - zoom in on a photo
