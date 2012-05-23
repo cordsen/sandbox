@@ -1,0 +1,54 @@
+﻿#ezp-container .hide {
+	display: none;
+}
+#ezp-container .image {
+    float: left;
+    padding: 2px;
+    background-image: url('http://img1.jurko.net/wall/paper/donald_duck_4.jpg');
+    width: 100px;
+    height: 75px;
+    background-position: center;
+
+    /* Make the background image cover the area of the <div>, and clip the excess */
+    background-size: cover;
+}
+
+/*#ezp-container .image img { width: 150px; height: 100px; margin: -25px 0 0 -50px; }*/
+
+#ezp-container .image-tray 
+{
+    border: 2px solid black;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 2px;
+    margin: 4px;
+}
+#ezp-container .image-tray .header, 
+#ezp-container .image-tray .body 
+{
+    background-color: #e6e6e6;
+}
+/* don't really need this here but it works as an example */
+#ezp-container *[class*="list"] {
+    float: left;
+    margin: 20px;
+}
+
+#ezp-container .listv
+{
+    width: 300px;
+}
+
+#ezp-container .image-list
+{
+    list-style: none;
+    height: 300px;
+    overflow: auto;
+}
+
+#ezp-templates 
+{
+	display: none;
+   
+}

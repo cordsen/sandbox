@@ -49,7 +49,8 @@
         render: function(list) {
             this.el = $('#ezp-templates #image').clone();
 			this.el.attr('class', 'image');
-            this.el.find("img.image").attr('src', this.model.get('iconUri'));
+            this.el.css('background-image','url('+this.model.get('iconUri')+')')
+            //this.el.find("img.image").attr('src', this.model.get('iconUri'));
             return this.el;
         }
 
