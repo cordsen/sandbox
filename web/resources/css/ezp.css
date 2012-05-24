@@ -6,6 +6,10 @@
 	display: none;
 }
 
+#ezp-container .tabbable {
+	float: left;
+}
+
 #ezp-container .image {
     float: left;
     padding: 2px;
@@ -71,4 +75,10 @@
 {
     margin-right: 0px;
     border-right: 0px;
+}
+
+#ezp-container .editor {
+    border: 1px solid #DDD;
+    float:left;
+    margin: 4px;
 }

@@ -14,37 +14,34 @@
                 <li><a href="#designs" data-toggle="tab">Designs</a></li>
             </ul>
             <div class="tab-content">
-                <div class="tab-pane active" id="products">
-                    <div class="image-tray listv">
-                        <div class="header">
-                            Choose A Product</div>
-                        <div class="body">
-                            <ul class="design-list">
-                            </ul>
-                        </div>
+                <div class="tab-pane active image-tray listv" id="products">
+                    <div class="header">
+                        Choose A Product</div>
+                    <div class="body">
+                        <ul class="design-list">
+                        </ul>
                     </div>
                 </div>
-                <div class="tab-pane" id="photos">
-                    <div class="image-tray listv">
-                        <div class="header">
-                            Add Photos</div>
-                        <div class="body">
-                            <ul class="image-list">
-                            </ul>
-                        </div>
+                <div class="tab-pane image-tray listv" id="photos">
+                    <div class="header">
+                        Add Photos</div>
+                    <div class="body">
+                        <ul class="image-list">
+                        </ul>
                     </div>
                 </div>
-                <div class="tab-pane" id="designs">
-                    <div class="image-tray listv">
-                        <div class="header">
-                            Choose A Design</div>
-                        <div class="body">
-                            <ul class="design-list">
-                            </ul>
-                        </div>
+                <div class="tab-pane image-tray listv" id="designs">
+                    <div class="header">
+                        Choose A Design</div>
+                    <div class="body">
+                        <ul class="design-list">
+                        </ul>
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="editor">
+            <canvas id="print-area" width="500" height="500"></canvas>
         </div>
     </div>
     <!-- template for image cell -->
@@ -59,11 +56,9 @@
     <script src="/resources/js/lib/underscore.js"></script>
     <script src="/resources/js/lib/backbone.js"></script>
     <script src="/resources/js/lib/bootstrap.js"></script>
+    <script src="/resources/js/lib/fabric_0.8.js"></script>
     <script src="/resources/js/Models.js"></script>
-    <script>
-        $(function () {
-            $('#myTab a:last').tab('show');
-        })
-    </script>
+    <script src="/resources/js/canvas.js"></script>
+
 </body>
 </html>
