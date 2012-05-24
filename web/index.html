@@ -1,35 +1,69 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>photo picker sandbox</title>
-  <link href="/resources/css/ezp.css" rel="stylesheet"/>
-  <link href="/resources/css/bootstrap.css" rel="stylesheet"/>
+    <title>photo picker sandbox</title>
+    <link href="/resources/css/ezp.css" rel="stylesheet" />
+    <link href="/resources/css/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
     <div id="ezp-container">
-        <div class="image-tray listv">
-            <div class="header">Header</div>
-            <div class="body">
-                <ul class="image-list"></ul>
+        <div class="tabbable tabs-left">
+            <ul class="nav nav-tabs" id="myTab">
+                <li class="active"><a href="#products" data-toggle="tab">Products</a></li>
+                <li><a href="#photos" data-toggle="tab">Photos</a></li>
+                <li><a href="#designs" data-toggle="tab">Designs</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="products">
+                    <div class="image-tray listv">
+                        <div class="header">
+                            Choose A Product</div>
+                        <div class="body">
+                            <ul class="design-list">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="photos">
+                    <div class="image-tray listv">
+                        <div class="header">
+                            Add Photos</div>
+                        <div class="body">
+                            <ul class="image-list">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane" id="designs">
+                    <div class="image-tray listv">
+                        <div class="header">
+                            Choose A Design</div>
+                        <div class="body">
+                            <ul class="design-list">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-
-<!-- template for image cell -->
+    <!-- template for image cell -->
     <div id="ezp-templates">
-        <button id="addPhoto">Add Photo</button>
+        <button id="addPhoto">
+            Add Photo</button>
         <ul>
-            <li id="image" draggable="true">
-            </li>
+            <li id="image" draggable="true"></li>
         </ul>
     </div>
-
-
-<script src="/resources/js/lib/jquery-1.7.2.js" ></script>
-<script src="/resources/js/lib/underscore.js" ></script>
-<script src="/resources/js/lib/backbone.js" ></script>
-<script src="/resources/js/Models.js" ></script>
-
+    <script src="/resources/js/lib/jquery-1.7.2.js"></script>
+    <script src="/resources/js/lib/underscore.js"></script>
+    <script src="/resources/js/lib/backbone.js"></script>
+    <script src="/resources/js/lib/bootstrap.js"></script>
+    <script src="/resources/js/Models.js"></script>
+    <script>
+        $(function () {
+            $('#myTab a:last').tab('show');
+        })
+    </script>
 </body>
 </html>
