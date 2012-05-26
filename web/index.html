@@ -9,12 +9,12 @@
     <div id="ezp-container">
         <div class="tabbable tabs-left">
             <ul class="nav nav-tabs" id="myTab">
-                <li class="active"><a href="#products" data-toggle="tab">Products</a></li>
-                <li><a href="#photos" data-toggle="tab">Photos</a></li>
+                <li><a href="#products" data-toggle="tab">Products</a></li>
+                <li class="active"><a href="#photos" data-toggle="tab">Photos</a></li>
                 <li><a href="#designs" data-toggle="tab">Designs</a></li>
             </ul>
             <div class="tab-content">
-                <div class="tab-pane active image-tray listv" id="products">
+                <div class="tab-pane image-tray listv" id="products">
                     <div class="header">
                         Choose A Product</div>
                     <div class="body">
@@ -22,7 +22,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="tab-pane image-tray listv" id="photos">
+                <div class="tab-pane active image-tray listv" id="photos">
                     <div class="header">
                         Add Photos</div>
                     <div class="body">
@@ -44,21 +44,24 @@
             <canvas id="print-area" width="500" height="500"></canvas>
         </div>
     </div>
+
     <!-- template for image cell -->
     <div id="ezp-templates">
         <button id="addPhoto">
             Add Photo</button>
         <ul>
-            <li id="image" draggable="true"></li>
+            <li id="image"><img class="image" src="" draggable="true" /></li>
         </ul>
     </div>
     <script src="/resources/js/lib/jquery-1.7.2.js"></script>
+    <script src="resources/js/lib/jquery-ui-1.8.20.custom.min.js" type="text/javascript"></script>
     <script src="/resources/js/lib/underscore.js"></script>
     <script src="/resources/js/lib/backbone.js"></script>
     <script src="/resources/js/lib/bootstrap.js"></script>
     <script src="/resources/js/lib/fabric_0.8.js"></script>
     <script src="/resources/js/Models.js"></script>
     <script src="/resources/js/canvas.js"></script>
+
 
 </body>
 </html>

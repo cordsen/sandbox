@@ -48,9 +48,12 @@
 
         render: function(list) {
             this.el = $('#ezp-templates #image').clone();
-			this.el.attr('class', 'image');
-            this.el.css('background-image','url('+this.model.get('iconUri')+')')
-            //this.el.find("img.image").attr('src', this.model.get('iconUri'));
+			//this.el.attr('class', 'image');
+            //this.el.css('background-image','url('+this.model.get('iconUri')+')')
+            var img = this.el.find("img.image");
+            img.attr('src', this.model.get('iconUri'));
+            img.draggable({ appendTo: '#ezp-container', scroll: false, helper: 'clone', opacity: 0.60,
+                stop: function(event, ui) {alert("drop");} });
             return this.el;
         }
 
