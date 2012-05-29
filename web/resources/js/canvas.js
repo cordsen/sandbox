@@ -1,10 +1,13 @@
-﻿$(function () {
-    var canvas1 = new fabric.Canvas('print-area');
+﻿(function($) {
+    var canvas1;
+    var root = this;
+    //var printArea;
+    canvas1 = new fabric.Canvas('print-area');
     canvas1.add(new fabric.Rect({ width: 50, height: 50, fill: 'red', top: 100, left: 100 }));
     canvas1.add(new fabric.Rect({ width: 30, height: 30, fill: 'green', top: 50, left: 50 }));
 
     function observe(eventName) {
-        canvas1.observe(eventName, function () { });
+        canvas1.observe(eventName, function() { });
     }
 
     observe('object:modified');
@@ -18,4 +21,6 @@
     // observe('after:render');
     observe('mouse:up');
     observe('mouse:down');
-});
+
+    printArea = root.canvas1;
+}).call(this, jQuery);
