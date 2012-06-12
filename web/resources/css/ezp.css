@@ -6,6 +6,10 @@
 	display: none;
 }
 
+#ezp-container li#image {
+	float: left;
+}
+
 #ezp-container .tabbable {
 	float: left;
 }

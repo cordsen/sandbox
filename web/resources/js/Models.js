@@ -60,7 +60,7 @@
                 stop: function(event, ui) {
                     var co = $('#print-area').offset(); 
                     fabric.Image.fromURL(event.srcElement.src, function(img) {
-                          var oImg = img.set({ left: ui.offset.left - co.left, top: ui.offset.top - co.top});
+                          var oImg = img.set({ left: ui.offset.left - co.left + 52, top: ui.offset.top - co.top + 42});
                           canvas1.add(oImg);
                           canvas1.renderAll();
                             console.log(co.left);
@@ -114,7 +114,7 @@
     root.ezp = ezpimg.collection;
 
 
-    canvas1 = new fabric.Canvas('print-area');
+    canvas1 = root.canvas1 = new fabric.Canvas('print-area');
     canvas1.add(new fabric.Rect({ width: 50, height: 50, fill: 'red', top: 100, left: 100 }));
     canvas1.add(new fabric.Rect({ width: 30, height: 30, fill: 'green', top: 50, left: 50 }));
 
@@ -133,6 +133,7 @@
     // observe('after:render');
     observe('mouse:up');
     observe('mouse:down');
+    
 
     
 
